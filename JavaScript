@@ -1,9 +1,0 @@
-function draw() {
-  background(240);
-
-  fill(0,120,255);
-  rect(100,250,50,-120);
-
-  fill(0);
-  text("Seg",110,270);
-}
