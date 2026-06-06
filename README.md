@@ -18,6 +18,18 @@ O Campo Sustentável é um aplicativo desenvolvido para auxiliar produtores rura
 
 "O Campo Sustentável foi criado para unir tecnologia e agricultura em favor do meio ambiente. Através do monitoramento do consumo de água, da análise de dados e da oferta de dicas sustentáveis, o aplicativo auxilia produtores rurais a utilizarem os recursos naturais de forma mais consciente. Dessa maneira, contribuímos para aumentar a produtividade no campo, reduzir desperdícios e construir um futuro mais sustentável para as próximas gerações." 🌱🚜💧
 
+---
+
+## ⚙️ Recursos Técnicos do Aplicativo Campo Sustentável
+
+# 🖥️ Tecnologias Utilizadas
+* **HTML5**: estrutura e organização das páginas.
+* **CSS3**: estilização e design da interface.
+* **JavaScript**: lógica de funcionamento do sistema.
+* **p5.js**: criação dos gráficos e elementos visuais interativos para monitoramento dos dados.
+
+
+📊 Sistema de Monitoramento
 
 
 
