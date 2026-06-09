@@ -1,236 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Campo Sustentável</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
 </head>
-
 <body>
 
-    <!-- MENU -->
+    <!-- NAVBAR -->
 
-    <header>
-        <nav>
-            <h2 class="logo">🌱 Campo Sustentável</h2>
+    <nav class="navbar">
 
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#problema">Desafios</a></li>
-                <li><a href="#solucao">Solução</a></li>
-                <li><a href="#simulador">Simulador</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#equipe">Equipe</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="container navbar-container">
 
-    <!-- CAPA -->
+            <div class="logo">
+                🌱 Campo Sustentável
+            </div>
 
-    <section id="inicio" class="hero">
+            <div class="nav-links">
 
-        <div class="hero-texto">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
 
-            <h1>
-                Tecnologia e Sustentabilidade para o Campo
-            </h1>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section id="inicio" class="hero-app">
+
+        <div class="hero-content">
+
+            <h1>Campo Sustentável</h1>
 
             <p>
-                Uma solução inteligente para economizar água,
-                preservar recursos naturais e aumentar a eficiência
-                da produção agrícola.
+                Tecnologia, preservação ambiental e produtividade
+                trabalhando juntas para um futuro melhor para o campo.
             </p>
 
-            <a href="#problema" class="botao">
-                Conhecer Projeto
+            <a href="#sobre" class="btn-app">
+                Conheça o Projeto
             </a>
 
         </div>
 
     </section>
-
-    <!-- PROBLEMA -->
-
-    <section id="problema" class="secao">
-
-        <h2>🌎 Os Desafios do Campo</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>💧 Desperdício de Água</h3>
-                <p>
-                    Grande parte da água utilizada na agricultura
-                    é desperdiçada por sistemas ineficientes.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>🌡 Mudanças Climáticas</h3>
-                <p>
-                    O clima cada vez mais instável afeta a produção
-                    e o planejamento agrícola.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>🌱 Conservação do Solo</h3>
-                <p>
-                    O uso inadequado do solo pode comprometer
-                    a produtividade das futuras gerações.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- SOLUÇÃO -->
-
-    <section id="solucao" class="secao verde">
-
-        <h2>🌿 Nossa Solução</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>📊 Monitoramento</h3>
-                <p>
-                    Acompanhe indicadores ambientais em tempo real.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>💧 Economia de Água</h3>
-                <p>
-                    Sugestões inteligentes para reduzir desperdícios.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>♻️ Sustentabilidade</h3>
-                <p>
-                    Incentivo às boas práticas agrícolas.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- SIMULADOR -->
-
-    <section id="simulador" class="secao">
-
-        <h2>☁️ Simulador Climático</h2>
-
-        <p>
-            Escolha a condição do clima e veja a recomendação.
-        </p>
-
-        <select id="clima">
-
-            <option value="">Selecione</option>
-
-            <option value="sol">
-                ☀️ Ensolarado
-            </option>
-
-            <option value="nublado">
-                ☁️ Nublado
-            </option>
-
-            <option value="chuva">
-                🌧 Chuvoso
-            </option>
-
-        </select>
-
-        <button onclick="analisarClima()">
-            Analisar
-        </button>
-
-        <div id="resultado"></div>
-
-    </section>
-
-    <!-- DASHBOARD -->
-
-    <section id="dashboard" class="secao verde">
-
-        <h2>📈 Dashboard Sustentável</h2>
-
-        <div class="indicadores">
-
-            <div class="indicador">
-                <h3 id="agua">0</h3>
-                <p>Litros Economizados</p>
-            </div>
-
-            <div class="indicador">
-                <h3 id="arvores">0</h3>
-                <p>Árvores Preservadas</p>
-            </div>
-
-            <div class="indicador">
-                <h3 id="co2">0</h3>
-                <p>Kg de CO₂ Evitados</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- P5.JS -->
-
-    <section class="secao">
-
-        <h2>📊 Consumo de Água</h2>
-
-        <p>
-            Visualização gráfica do uso sustentável dos recursos.
-        </p>
-
-        <div id="grafico"></div>
-
-    </section>
-
-    <!-- EQUIPE -->
-
-    <section id="equipe" class="secao">
-
-        <h2>👨‍🌾 Equipe do Projeto</h2>
-
-        <p>
-            Projeto desenvolvido para o Agrinho com o objetivo
-            de promover inovação e sustentabilidade no campo.
-        </p>
-
-        <p>
-            Desenvolvido por: Seu Nome
-        </p>
-
-    </section>
-
-    <!-- RODAPÉ -->
-
-    <footer>
-
-        <p>
-            © 2026 Campo Sustentável | Projeto Agrinho
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="sketch.js"></script>
 
 </body>
 </html>
